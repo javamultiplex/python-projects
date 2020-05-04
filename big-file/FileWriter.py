@@ -1,6 +1,6 @@
 import csv
 
-ROWS_COUNT = 1000000
+ROWS_COUNT = 4000000
 
 FILE_HEADER = ['Name', 'Department', 'Age', 'Salary', 'Address',
                'Attribute1', 'Attribute2', 'Attribute3', 'Attribute4', 'Attribute5',
@@ -21,7 +21,28 @@ FILE_HEADER = ['Name', 'Department', 'Age', 'Salary', 'Address',
                'Attribute76', 'Attribute77', 'Attribute78', 'Attribute79', 'Attribute80',
                'Attribute81', 'Attribute82', 'Attribute83', 'Attribute84', 'Attribute85',
                'Attribute86', 'Attribute87', 'Attribute88', 'Attribute89', 'Attribute90',
-               'Attribute91', 'Attribute92', 'Attribute93', 'Attribute94', 'Attribute95']
+               'Attribute91', 'Attribute92', 'Attribute93', 'Attribute94', 'Attribute95',
+               'Attribute96', 'Attribute97', 'Attribute98', 'Attribute99', 'Attribute100',
+               'Attribute101', 'Attribute102', 'Attribute103', 'Attribute104', 'Attribute105',
+               'Attribute106', 'Attribute107', 'Attribute108', 'Attribute109', 'Attribute110',
+               'Attribute111', 'Attribute112', 'Attribute113', 'Attribute114', 'Attribute115',
+               'Attribute116', 'Attribute117', 'Attribute118', 'Attribute119', 'Attribute120',
+               'Attribute121', 'Attribute122', 'Attribute123', 'Attribute124', 'Attribute125',
+               'Attribute126', 'Attribute127', 'Attribute128', 'Attribute129', 'Attribute130',
+               'Attribute131', 'Attribute132', 'Attribute133', 'Attribute134', 'Attribute135',
+               'Attribute136', 'Attribute137', 'Attribute138', 'Attribute139', 'Attribute140',
+               'Attribute141', 'Attribute142', 'Attribute143', 'Attribute144', 'Attribute45',
+               'Attribute146', 'Attribute147', 'Attribute148', 'Attribute149', 'Attribute150',
+               'Attribute151', 'Attribute152', 'Attribute153', 'Attribute154', 'Attribute155',
+               'Attribute156', 'Attribute157', 'Attribute158', 'Attribute159', 'Attribute160',
+               'Attribute161', 'Attribute162', 'Attribute163', 'Attribute164', 'Attribute165',
+               'Attribute166', 'Attribute167', 'Attribute168', 'Attribute169', 'Attribute170',
+               'Attribute171', 'Attribute172', 'Attribute173', 'Attribute174', 'Attribute175',
+               'Attribute176', 'Attribute177', 'Attribute178', 'Attribute179', 'Attribute180',
+               'Attribute181', 'Attribute182', 'Attribute183', 'Attribute184', 'Attribute185',
+               'Attribute186', 'Attribute187', 'Attribute188', 'Attribute189', 'Attribute190',
+               'Attribute191', 'Attribute192', 'Attribute193', 'Attribute194', 'Attribute195'
+               ]
 
 with open('employee_file.csv', mode='w') as employee_file:
     employee_writer = csv.writer(employee_file)
@@ -46,5 +67,25 @@ with open('employee_file.csv', mode='w') as employee_file:
                                   'temp', 'temp', 'temp', 'temp', 'temp',
                                   'temp', 'temp', 'temp', 'temp', 'temp',
                                   'temp', 'temp', 'temp', 'temp', 'temp',
-                                  'temp', 'temp', 'temp', 'temp', 'temp'
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
+                                  'temp', 'temp', 'temp', 'temp', 'temp',
                                   ])

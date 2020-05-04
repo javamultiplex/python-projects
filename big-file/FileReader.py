@@ -1,4 +1,4 @@
-import time
+import timeit
 
 
 def get_sum(lines):
@@ -12,25 +12,25 @@ def get_avg(lines):
     addition = 0
     for row in range(1, len(lines)):
         addition += float(lines[row].split(',')[3])
-    avg = float(addition)/float(len(lines)-1)
+    avg = float(addition) / float(len(lines) - 1)
     return avg
 
 
-with open('employee_file.csv', mode='r') as employee_file:
-    file_lines = employee_file.readlines()
-    start = time.time()
-    print("sum is : {}".format(get_sum(file_lines)))
-    stop = time.time()
-    print("--- %s seconds ---" % (stop - start))
+def read():
+    with open('employee_file.csv', mode='r') as employee_file:
+        file_lines = employee_file.readlines()
+        print("sum is : {}".format(get_sum(file_lines)))
+        print("avg is : {}".format(get_avg(file_lines)))
 
-    start = time.time()
-    print("avg is : {}".format(get_avg(file_lines)))
-    stop = time.time()
-    print("--- %s seconds ---" % (stop - start))
 
+print(timeit.timeit(read, number=1))
+
+# 1 million rows, 100 columns
 # sum is : 499999500000
-# --- 4.740206003189087 seconds ---
 # avg is : 500099.5
-# --- 4.7077178955078125 seconds ---
+# 11.902159672000002
 
-
+# 4 millions rows, 200 columns
+# sum is : 7999998000000
+# avg is : 2000099.5
+# 113.34780171300001
