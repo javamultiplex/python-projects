@@ -29,11 +29,16 @@ def read_and_calculate_sum_avg():
         params = config()
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
-        cur.execute('SELECT SUM(AGE), AVG(SALARY) FROM employees1')
-        row = cur.fetchone()
-        while row is not None:
-            print(row)
-            row = cur.fetchone()
+        cur.execute('SELECT AGE,SALARY FROM employees')
+        rows = cur.fetchall()
+        age_total = 0
+        salary_total = 0
+        for row in rows:
+            age_total += row[0]
+            salary_total += row[1]
+        avg = salary_total/len(rows)
+        print("Age Total is {}".format(age_total))
+        print("Avg is {}".format(avg))
         cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
@@ -67,8 +72,10 @@ if __name__ == '__main__':
 
 
 # 1 million rows, 100 columns
-# (499999500000, Decimal('500099.500000000000'))
-# 0.18974972 seconds
-
-# 4 million rows, 200 columns
+# loaded all columns - 37.375320449 seconds
+# loaded integer and decimal columns - 1.562145158 seconds
+# 4 million rows, 200 columns - not able to load whole data at a time, getting below error
+# server closed the connection unexpectedly
+# 	This probably means the server terminated abnormally
+# 	before or while processing the request.
 
